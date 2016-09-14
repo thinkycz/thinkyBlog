@@ -1,0 +1,55 @@
+title = "Index"
+url = "/"
+layout = "default"
+is_hidden = 0
+==
+<!-- header section -->
+{% partial "header_main" %}
+
+<!-- about and skills section -->
+<section class='container'>
+	<div class='row'>
+		<div class='col-md-6 col-sm-12'>
+		    {% content "about_box.htm" %}
+		</div>
+		<div class='col-md-6 col-sm-12'>
+			{% content "skills_box.htm" %}
+		</div>
+	</div>
+</section>
+
+<!-- education and languages -->
+<section class='container'>
+	<div class='row'>
+		<div class='col-md-8 col-sm-12'>
+		    {% content "education_box.htm" %}
+		</div>
+		<div class='col-md-4 col-sm-12'>
+			{% content "languages_box.htm" %}
+		</div>
+	</div>
+</section>
+
+<!-- career section -->
+<section class='container'>
+	<div class='row'>
+		<div class='col-md-6 col-sm-12'>
+		    {% content "career_box.htm" %}
+		</div>
+		<div class='col-md-6 col-sm-12'>
+		    {% content "hobbies_box.htm" %}
+		</div>
+	</div>
+</section>
+
+<!-- contact and experience -->
+<section class='container'>
+	<div class='row'>
+		<div class='col-md-4 col-sm-12'>
+		    {% content "contact_box.htm" %}
+		</div>
+		<div class='col-md-8 col-sm-12'>
+		    {% content "experience_box.htm" %}
+		</div>
+	</div>
+</section>

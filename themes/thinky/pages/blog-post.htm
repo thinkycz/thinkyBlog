@@ -1,0 +1,49 @@
+title = "Blog post"
+url = "/blog/post/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog"
+==
+{% set post = blogPost.post %}
+
+<!-- header section -->
+<header class="header-small">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <img alt='templatemo easy profile' class='img-responsive img-circle' src='http://www.gravatar.com/avatar/12194c6ac6469b5e9733fd2ce6093cd0?s=200'>
+                <h1 class="tm-title bold shadow">{{ post.title }}</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class='container'>
+    <div class='first box rounded'>
+        
+
+<div class="content">{{ post.content_html|raw }}</div>
+
+{% if post.featured_images.count %}
+    <div class="featured-images text-center">
+        {% for image in post.featured_images %}
+            <p>
+                <img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%" />
+            </p>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<hr>
+
+<p class="info">Publikováno {{ post.published_at|date('d.m.Y') }}</p>
+
+    </div>
+</section>

@@ -1,0 +1,35 @@
+description = "Default layout"
+
+[googleTracker]
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Long's portfolio - thinky.cz</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<link rel="stylesheet" href="{{ 'assets/compiled/css/all.css'|theme }}">
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse">
+
+	<!-- preloader section -->
+	<div class="preloader">
+		<div class="sk-spinner sk-spinner-wordpress">
+			<span class="sk-inner-circle"></span>
+		</div>
+	</div>
+
+    {% page %}
+
+	<!-- footer section -->
+	{% partial "footer" %}
+	
+	<script src="{{ 'assets/compiled/js/all.js'|theme }}"></script>
+	
+    {% component 'googleTracker' %}
+</body>
+</html>

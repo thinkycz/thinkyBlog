@@ -1,0 +1,16 @@
+.rounded {
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+.excerpt {
+    margin: 0 20px 10px;
+}
+
+.post-list {
+    list-style-type: none;
+}
+
+.footer-buttons {
+    margin-top: 20px;
+}
